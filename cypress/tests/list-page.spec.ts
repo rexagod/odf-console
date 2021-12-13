@@ -32,5 +32,7 @@ describe('Tests storage system list page', () => {
         cy.get('a').contains(STORAGE_SYSTEM_NAME).click();
         // Title should always use h1
         detailsPage.getResourceTitle().contains(STORAGE_SYSTEM_NAME).should('exist');
+        // Todo(rexagod): Add a proper data-selector once build goes through
+        cy.contains('Utilization', { timeout: 5 * 60000 });
     });
 });
